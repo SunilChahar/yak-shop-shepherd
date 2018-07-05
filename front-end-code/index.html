@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="yak-shop.controller.js"></script>
+<style type "text/css">
+/* @group Blink */
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+/* @end */
+</style>
+</head>
+<body>
+	<div class="container"ng-app="myApp" ng-controller="myCtrl" align="center" style="margin-top: 10%; margin-right: 10%; background-color:silver;margin-left: 10%; border-color: black;border-style: solid;" >
+	<h1 align="center">The Yak Shop</h1>
+	<table>
+		<tr>
+			<td>Enter your Name: </td>
+			<td><input ng-model="name" type="text" size="20"/></td>
+			<td width="40%" style="color: red;">{{nameMsg}}</td>
+		</tr>
+		<br><br>
+		<tr>
+			<td class="3"><h4>Order Details</h4></td>
+		</tr>
+		<tr>
+			<td>Milk: </td>
+			<td><input ng-model="milk" type="number" size="20"/></td>
+		</tr>
+		<tr>
+			<td>Wool: </td>
+			<td><input ng-model="skin" type="number" size="20"/></td>
+			<td width="40%" style="color: red;" align="left">{{skinMsg}}</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left" height="20px" style="color: red;">{{orderMsg}}</td>
+		</tr>
+		<tr>
+			<td colspan="3">You are about to place an order as below:<br>1. Milk: {{milk}}<br>2. Skin: {{skin}}</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><button class="btn btn-success" ng-click="click()">Confirm Order</button></td>
+		</tr>		
+	</table>
+	<hr />
+	<span class="tab blink"><b colspan="3" align="center" height="20px" style="color: green;">{{orderProcessed}}{{orderResult}}</b></span></tr>
+	</div>
+</body>
+</html>
